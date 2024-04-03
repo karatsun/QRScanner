@@ -641,7 +641,7 @@
         },
         showScanQrPopup: function (linksOnly) {
             Telegram.WebApp.showScanQrPopup({
-                text: linksOnly ? 'with any link' : 'for test purposes'
+                text: linksOnly ? 'with any link' : 'Please, scan QR-code'
             }, function (text) {
                 if (linksOnly) {
                     const lowerText = text.toString().toLowerCase();
@@ -823,7 +823,7 @@
         
         });
         DemoApp.close();
-        DemoApp.showScanQrPopup('Please, scan your QR-codes');
+        DemoApp.showScanQrPopup();
 
 
         Telegram.WebApp.onEvent('themeChanged', function () {
