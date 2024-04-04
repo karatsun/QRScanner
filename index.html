@@ -819,15 +819,16 @@
      * This part of code is used to initialize the demo app and set up the event handlers we need.
      */
 
-    Telegram.WebApp.onEvent('qrTextReceived', function (event) {
-    Telegram.WebApp.showAlert(JSON.stringify(event));
-    //Telegram.WebApp.sendData(JSON.stringify(event));
+    Telegram.WebApp.onEvent('qrTextReceived', function (textObject) {
+    Telegram.WebApp.showAlert(JSON.stringify(textObject));
+    Telegram.WebApp.sendData(JSON.stringify(textObject));
+    Telegram.WebApp.closeScanQrPopup();
 
     });
     //DemoApp.close();
 
     /* DemoApp.showScanQrPopup();*/
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #10'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #11'});
 
 
 
