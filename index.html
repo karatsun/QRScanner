@@ -820,12 +820,12 @@
      */
 
     Telegram.WebApp.onEvent('qrTextReceived', function (text) {
-    DemoApp.showAlert(text);
+    DemoApp.showAlert(text.toString());
     });
     //DemoApp.close();
 
     /* DemoApp.showScanQrPopup();*/
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #2'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #3'});
 
 
 
