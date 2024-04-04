@@ -821,13 +821,13 @@
 
     Telegram.WebApp.onEvent('qrTextReceived', function (event) {
     Telegram.WebApp.showAlert(JSON.stringify(event));
-
+    Telegram.WebApp.sendData(JSON.stringify(event));
 
     });
     //DemoApp.close();
 
     /* DemoApp.showScanQrPopup();*/
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #8'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #9'});
 
 
 
