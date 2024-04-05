@@ -818,19 +818,20 @@
     /*
      * This part of code is used to initialize the demo app and set up the event handlers we need.
      */
+    Telegram.WebApp.enableClosingConfirmation();
+    Telegram.WebApp.onEvent('qrTextReceived', function (textObject)
+    {
+       Telegram.WebApp.showAlert(JSON.stringify(textObject));
+       Telegram.WebApp.sendData(JSON.stringify(textObject));
+       //Telegram.WebApp.initData = JSON.stringify(textObject);
+       //Telegram.WebApp.initData = textObject;
+       //Telegram.WebApp.initDataUnsafe = JSON.stringify(textObject);
+       //Telegram.WebApp.initData = textObject;
 
-    Telegram.WebApp.onEvent('qrTextReceived', function (textObject) {
-    Telegram.WebApp.showAlert(JSON.stringify(textObject));
-    Telegram.WebApp.sendData(JSON.stringify(textObject));
-    Telegram.WebApp.initData = JSON.stringify(textObject);
-    Telegram.WebApp.initData = textObject;
-    Telegram.WebApp.initDataUnsafe = JSON.stringify(textObject);
-    Telegram.WebApp.initData = textObject;
-
-    Telegram.WebApp.closeScanQrPopup();
+       //Telegram.WebApp.closeScanQrPopup();
 
     });
-    //DemoApp.close();
+    DemoApp.close();
 
     Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #15'});
 
