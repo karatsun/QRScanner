@@ -819,14 +819,36 @@
      * This part of code is used to initialize the demo app and set up the event handlers we need.
      */
     Telegram.WebApp.enableClosingConfirmation();
+
+    //-------------------------------------
+    function isUnique(array, valueToCheck)
+    {
+      return array.indexOf(value) === -1;
+    }
+
+    //array of scanned QR-codes
+    const resultQRCodes = [];
+    let i = 0;
+
     Telegram.WebApp.onEvent('qrTextReceived', function (textObject)
     {
        //Telegram.WebApp.showAlert(JSON.stringify(textObject));
+       let scannedQRCode = textObject.data;
+       //check if empty;
+       if (scannedQRCode.length === 0) {return;}
+       //check if unique
+       let isScannedQRCodeUnique = isUnique(resultQRCodes,scannedQRCode);
+       //Add data to array if unique
+                   if (isScannedQRCodeUnique)
+                   {
+                      resultQRCodes[i] = scannedQRCode;
+                      i++;
+                   }
        //show popup
        //-------------------------
        Telegram.WebApp.showPopup({
-               title  : 'Scanned value: ' + textObject.data,
-               message: 'Popup message',
+               title  : 'Totally scanned: ' + resultQRCodes.length,
+               message: isScannedQRCodeUnique ? 'Scanned value: ' + textObject.data : 'Scanned code in not UNIQUE. \r\nOperation skipped!',
                buttons: [
                           {id: 'next', type: 'default', text: 'Next'},
                           {id: 'stop', type: 'default', text: 'Stop'},
@@ -839,8 +861,6 @@
          }
          else if (buttonId === 'stop')
          {
-                //check uniquness and add last qr-code to list
-
                 //close scaner
                 Telegram.WebApp.closeScanQrPopup();
                 //send all the data
@@ -848,8 +868,6 @@
          }
          else if (buttonId === 'next')
          {
-                //check uniquness and add last qr-code to list
-
          }
        });
        //-------------------------
@@ -859,7 +877,7 @@
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #19'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #20'});
 
     // in the web app
     window.addEventListener("ready", async function () {
