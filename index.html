@@ -865,7 +865,7 @@
                 //close scaner
                 Telegram.WebApp.closeScanQrPopup();
                 //send all the data
-                Telegram.WebApp.sendData(JSON.stringify(textObject));
+                Telegram.WebApp.sendData(resultQRCodes);
          }
          else if (buttonId === 'next')
          {
@@ -878,7 +878,7 @@
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #23'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #24'});
 
     // in the web app
     window.addEventListener("ready", async function () {
