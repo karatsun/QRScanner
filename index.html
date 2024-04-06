@@ -823,7 +823,7 @@
     //-------------------------------------
     function isUnique(array, valueToCheck)
     {
-      return array.indexOf(value) === -1;
+      return array.indexOf(valueToCheck) === -1;
     }
 
     //array of scanned QR-codes
@@ -848,7 +848,7 @@
        //-------------------------
        Telegram.WebApp.showPopup({
                title  : 'Totally scanned: ' + resultQRCodes.length,
-               message: isScannedQRCodeUnique ? 'Scanned value: ' + textObject.data : 'Scanned code in not UNIQUE. \r\nOperation skipped!',
+               message: isScannedQRCodeUnique ? 'Scanned value: ' + textObject.data : 'Scanned code in not UNIQUE. Operation skipped!',
                buttons: [
                           {id: 'next', type: 'default', text: 'Next'},
                           {id: 'stop', type: 'default', text: 'Stop'},
@@ -877,7 +877,7 @@
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #21'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #22'});
 
     // in the web app
     window.addEventListener("ready", async function () {
