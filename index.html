@@ -821,7 +821,7 @@
     Telegram.WebApp.enableClosingConfirmation();
     Telegram.WebApp.onEvent('qrTextReceived', function (textObject)
     {
-       Telegram.WebApp.showAlert(JSON.stringify(textObject));
+       //Telegram.WebApp.showAlert(JSON.stringify(textObject));
        //show popup
        //-------------------------
        Telegram.WebApp.showPopup({
@@ -859,7 +859,7 @@
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #18'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #19'});
 
     // in the web app
     window.addEventListener("ready", async function () {
