@@ -336,7 +336,7 @@
 <body class="" style="visibility: hidden;">
 
 <section id="top_sect" class="second">
-    <button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello,!»</button>
+<!-- <button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello,!»</button>
     <button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview
         button</button>
     <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot (x10)</button>
@@ -352,7 +352,7 @@
     <div class="sect_row">Header: <select id="header_color_sel">
             <option value="bg_color" selected>bg_color</option>
             <option value="secondary_bg_color">secondary_bg_color</option>
-        </select></div>
+        </select></div>-->
     <div class="sect_row">Background: <input type="color" id="bg_color_input" /> <select id="bg_color_sel">
             <option value="bg_color" selected>bg_color</option>
             <option value="secondary_bg_color">secondary_bg_color</option>
@@ -362,7 +362,7 @@
 <section>
     <div id="btn_status" class="hint" style="display: none;">
     </div>
-    <p>Test links:</p>
+    <!-- <p>Test links:</p>
     <ul>
         <li><a id="regular_link" href="">Regular link #2</a> (opens inside webview)</li>
         <li><a href="https://telegram.org/" target="_blank">target="_blank" link</a> (opens outside webview)</li>
@@ -375,36 +375,36 @@
     </ul>
     <p>Test permissions:</p>
     <ul>
-        <!--<li><a href="javascript:;" onclick="return DemoApp.requestLocation(this);">Request Location</a> <span></span></li>
+        <li><a href="javascript:;" onclick="return DemoApp.requestLocation(this);">Request Location</a> <span></span></li>
         <li><a href="javascript:;" onclick="return DemoApp.requestVideo(this);">Request Video</a> <span></span></li>
         <li><a href="javascript:;" onclick="return DemoApp.requestAudio(this);">Request Audio</a> <span></span></li>
         <li><a href="javascript:;" onclick="return DemoApp.requestAudioVideo(this);">Request Audio+Video</a> <span></span></li>
         <li><a href="javascript:;" onclick="return DemoApp.testClipboard(this);" id="clipboard_test">Read from clipboard</a> <span></span></li>-->
-    </ul>
+    <!--</ul>
     <p>Test alerts:</p>
     <div class="columns">
         <ul>
-            <!--<li><a href="javascript:;" onclick="alert('Hello!');">alert</a></li>
+            <li><a href="javascript:;" onclick="alert('Hello!');">alert</a></li>
             <li><a href="javascript:;" onclick="confirm('Are you sure?');">confirm</a></li>
-            <li><a href="javascript:;" onclick="prompt('How old are you?');">prompt</a></li>-->
+            <li><a href="javascript:;" onclick="prompt('How old are you?');">prompt</a></li>
         </ul>
-        <ul>
+        <ul>-->
             <!--<li><a href="javascript:;" onclick="DemoApp.showAlert('Hello!');">showAlert</a></li>
             <li><a href="javascript:;" onclick="DemoApp.showConfirm('Are you sure?');">showConfirm</a></li>
             <li><a href="javascript:;" onclick="DemoApp.requestWriteAccess();">requestWriteAccess</a></li>
             <li><a href="javascript:;" onclick="DemoApp.requestContact();">requestContact</a></li>
             <li><a href="javascript:;" onclick="DemoApp.showPopup();">showPopup</a></li>-->
-            <li><a href="javascript:;" onclick="DemoApp.showScanQrPopup();">showScanQrPopup</a></li>
-            <!--<li><a href="javascript:;" onclick="DemoApp.showScanQrPopup(true);">showScanQrPopup (links only)</a></li>-->
+        <!--  <li><a href="javascript:;" onclick="DemoApp.showScanQrPopup();">showScanQrPopup</a></li>
+            <li><a href="javascript:;" onclick="DemoApp.showScanQrPopup(true);">showScanQrPopup (links only)</a></li>
         </ul>
-    </div>
-    <p>Haptics:</p>
+    </div>-->
+<!--  <p>Haptics:</p>
     <ul>
-        <!--<li>Impact: <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('heavy');">heavy</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('light');">light</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('medium');">medium</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('rigid');">rigid</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('soft');">soft</a><br><br></li>
+        <li>Impact: <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('heavy');">heavy</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('light');">light</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('medium');">medium</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('rigid');">rigid</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('soft');">soft</a><br><br></li>
         <li>Notification: <a href="javascript:Telegram.WebApp.HapticFeedback.notificationOccurred('error');">error</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.notificationOccurred('success');">success</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.notificationOccurred('warning');">warning</a><br><br></li>
-        <li>Selection: <a href="javascript:Telegram.WebApp.HapticFeedback.selectionChanged();">changed</a><br><br></li>-->
-    </ul>
-    <pre><code id="webview_data"></code></pre>
+        <li>Selection: <a href="javascript:Telegram.WebApp.HapticFeedback.selectionChanged();">changed</a><br><br></li>
+    </ul>-->
+<!--  <pre><code id="webview_data"></code></pre>
     <div class="hint">
         Data passed to webview.
         <span id="webview_data_status" class="status_need">Checking hash...</span>
@@ -412,7 +412,7 @@
     <pre><code id="theme_data"></code></pre>
     <div class="hint">
         Theme params
-    </div>
+    </div>-->
     <div class="hint">
         Version: <span id="ver"></span>,
         platform: <span id="platform"></span>
@@ -872,7 +872,7 @@
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #28'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #29'});
 
     // in the web app
     window.addEventListener("ready", async function () {
