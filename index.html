@@ -818,8 +818,6 @@
     /*
      * This part of code is used to initialize the demo app and set up the event handlers we need.
      */
-    Telegram.WebApp.enableClosingConfirmation();
-    DemoApp.viewportHeight = 0;
     //-------------------------------------
     function isUnique(array, valueToCheck)
     {
@@ -872,13 +870,12 @@
          }
        });
        //-------------------------
-
        //Telegram.WebApp.closeScanQrPopup();
 
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #25'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #26'});
 
     // in the web app
     window.addEventListener("ready", async function () {
