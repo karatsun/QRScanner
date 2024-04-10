@@ -337,11 +337,10 @@
 
 <section id="top_sect" class="second">
 <!--<button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello,!»</button>-->
-<!--<button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview
-        button</button>-->
-    <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot (x10)</button>
-    <button onclick="DemoApp.expand();">Expand Webview</button>
-    <button onclick="DemoApp.toggleMainButton(this);">Hide Main Button</button>
+<button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);"></button>
+    <button id="data_btn" onclick="DemoApp.sendTime(true);"></button>
+    <button onclick="DemoApp.expand();"></button>
+    <button onclick="DemoApp.toggleMainButton(this);"></button>
     <input type="text" placeholder="Input text in regular input..." id="regular_field" />
     <div class="input" contenteditable="true" data-placeholder="Input text in contenteditable field..." id="text_field">
     </div>
@@ -872,7 +871,7 @@
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #38.5'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #38.6'});
 
     // in the web app
     window.addEventListener("ready", async function () {
