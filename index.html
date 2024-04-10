@@ -336,7 +336,7 @@
 <body class="" style="visibility: hidden;">
 
 <section id="top_sect" class="second">
-<!-- <button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello,!»</button>
+ <button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello,!»</button>
     <button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview
         button</button>
     <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot (x10)</button>
@@ -352,7 +352,7 @@
     <div class="sect_row">Header: <select id="header_color_sel">
             <option value="bg_color" selected>bg_color</option>
             <option value="secondary_bg_color">secondary_bg_color</option>
-        </select></div>-->
+        </select></div>
     <div class="sect_row">Background: <input type="color" id="bg_color_input" /> <select id="bg_color_sel">
             <option value="bg_color" selected>bg_color</option>
             <option value="secondary_bg_color">secondary_bg_color</option>
@@ -396,9 +396,9 @@
             <li><a href="javascript:;" onclick="DemoApp.showPopup();">showPopup</a></li>
          <li><a href="javascript:;" onclick="DemoApp.showScanQrPopup();">showScanQrPopup</a></li>
             <li><a href="javascript:;" onclick="DemoApp.showScanQrPopup(true);">showScanQrPopup (links only)</a></li>
-        </ul>
+        </ul>-->
     </div>
-  <p>Haptics:</p>-->
+<!-- <p>Haptics:</p>-->
     <ul>
         <li>Impact: <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('heavy');">heavy</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('light');">light</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('medium');">medium</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('rigid');">rigid</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.impactOccurred('soft');">soft</a><br><br></li>
         <li>Notification: <a href="javascript:Telegram.WebApp.HapticFeedback.notificationOccurred('error');">error</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.notificationOccurred('success');">success</a>, &nbsp; <a href="javascript:Telegram.WebApp.HapticFeedback.notificationOccurred('warning');">warning</a><br><br></li>
@@ -872,7 +872,7 @@
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #32'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #33'});
 
     // in the web app
     window.addEventListener("ready", async function () {
