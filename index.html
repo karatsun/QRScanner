@@ -57,7 +57,7 @@
                 mainButton.show();
                 el.innerHTML = 'Hide Main Button';
             }
-        },
+        },ma
 
         // actions
         sendMessage(msg_id, with_webview) {
@@ -463,6 +463,9 @@
                 Telegram.WebApp.closeScanQrPopup();
                 //send all the data
                 Telegram.WebApp.sendData(resultQRCodes);
+                //So, Now we can close the scanner and application
+                Telegram.WebApp.closeScanQrPopup();
+                Telegram.WebApp.close();
          }
          else if (buttonId === 'next')
          {
@@ -474,7 +477,7 @@
     });
     //DemoApp.close();
 
-    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #39.2'});
+    Telegram.WebApp.showScanQrPopup({text: 'Please,SCAN Trial #39.3'});
 
     // in the web app
     window.addEventListener("ready", async function () {
